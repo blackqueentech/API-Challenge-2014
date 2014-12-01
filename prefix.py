@@ -1,5 +1,5 @@
 def prefix(L, pre):
-"""takes in a list of string L and a string prefix; returns list of strings from L that start with prefix"""
+"""takes in a list of string L and a string prefix; returns list of strings from L that don't start with prefix"""
     if L == []:
         return []
     elif pre == '':
@@ -9,6 +9,6 @@ def prefix(L, pre):
         j = 0
         goodString = []
         for i in range(len(L)):
-            if L[i][0:len(pre)] == pre:
+            if L[i][0:len(pre)] != pre:
                 goodString.append(L[i])
         return goodString
